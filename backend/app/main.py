@@ -12,6 +12,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
+        "https://ecosort-ai-brown.vercel.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],
