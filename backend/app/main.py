@@ -29,6 +29,11 @@ def home():
         "message": "Welcome to EcosortAI"
     }
 
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
+
+    
 @app.post("/predict")
 async def predict_image(file: UploadFile=File(...)):
     if not file.content_type.startswith("image/"):

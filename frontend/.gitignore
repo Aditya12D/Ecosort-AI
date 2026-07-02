@@ -1,5 +1,13 @@
+# =========================
+# Frontend
+# =========================
+node_modules/
+dist/
+dist-ssr/
+*.local
+
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,16 +15,45 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# =========================
+# Backend
+# =========================
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
 
-# Editor directories and files
+# Environment Variables
+.env
+.env.*
+
+# Uploads
+uploads/
+backend/uploads/
+
+# Model checkpoints (ignore only if you DON'T want to upload them)
+*.h5
+*.ckpt
+
+# TensorBoard
+runs/
+
+# =========================
+# VS Code / IDE
+# =========================
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
+
+# =========================
+# OS Files
+# =========================
 .DS_Store
+Thumbs.db
+
+# Windows
 *.suo
 *.ntvs*
 *.njsproj
