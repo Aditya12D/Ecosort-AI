@@ -13,6 +13,9 @@ const DropZone = forwardRef((props, ref) => {
       }
   }));
 
+
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -65,7 +68,7 @@ const DropZone = forwardRef((props, ref) => {
       try {
 
           const response = await axios.post(
-              "http://127.0.0.1:8000/predict",
+              `${API_URL}/predict`,
               formData,
               {
                   headers: {
